@@ -1,0 +1,68 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      lang="en" data-namespace-typo3-fluid="true">
+<head>
+    <meta charset="utf-8">
+    <title>Template: OtMenucards</title>
+</head>
+<body>
+
+<f:layout name="CeLayoutBootstrap5"/>
+
+
+<!--todo picture tag-->
+
+<f:section name="Main">
+
+    <f:render partial="Header" section="Main" arguments="{data : data}"/>
+
+    <f:if condition="{menu} ">
+
+        <f:switch expression="{flexform.columnsXxl}">
+            <f:case value="1">
+                <f:variable name="cssCols" value="row-cols-1"/>
+            </f:case>
+            <f:case value="2">
+                <f:variable name="cssCols" value="row-cols-1 row-cols-md-2"/>
+            </f:case>
+            <f:case value="3">
+                <f:variable name="cssCols" value="row-cols-1 row-cols-md-3"/>
+            </f:case>
+            <f:case value="4">
+                <f:variable name="cssCols" value="row-cols-1 row-cols-md-3 row-cols-lg-4"/>
+            </f:case>
+            <f:defaultCase>
+                <f:variable name="cssCols" value="row-cols-1"/>
+            </f:defaultCase>
+        </f:switch>
+
+        <div class="row {cssCols} g-4">
+            <f:for each="{menu}" as="page">
+                <div class="col">
+                    <div class="card shadow-sm h-100">
+                        <f:if condition="{page.files.0}">
+                            <figure class="ratio ratio-16x9">
+                                <f:image image="{page.files.0}" class="card-img-top" cropVariant="16:9" maxWidth="737" loading="lazy"/>
+                            </figure>
+                        </f:if>
+                        <div class="card-body">
+                            <h2 class="card-title h5">{page.title}</h2>
+                            <p class="card-text">
+                                {page.data.abstract -> f:format.crop(maxCharacters: '200', append: ' …',respectHtml: 'true',respectWordBoundaries: 'true')}
+                            </p>
+
+                            <a href="{page.link}" class="btn btn-lg btn-primary">
+                                <f:translate key="more" default="More" />
+                                <svg><use xlink:href="#svg-chevron-right" data-img="img/share.png"></use></svg>
+                                <noscript><img src="img/share.png" alt="Share" /></noscript>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </f:for>
+        </div>
+    </f:if>
+</f:section>
+
+</body>
+</html>

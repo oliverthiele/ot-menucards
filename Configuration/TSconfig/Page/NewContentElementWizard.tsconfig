@@ -1,0 +1,13 @@
+mod.wizards.newContentElement.wizardItems.common {
+  elements {
+    ot_menucards {
+      iconIdentifier = content-menu-pages
+      title = LLL:EXT:ot_menucards/Resources/Private/Language/locallang_be.xlf:wizard.title
+      description = LLL:EXT:ot_menucards/Resources/Private/Language/locallang_be.xlf:wizard.description
+      tt_content_defValues {
+        CType = ot_menucards
+      }
+    }
+  }
+  show := addToList(ot_menucards)
+}

@@ -1,0 +1,32 @@
+{
+	"name": "oliverthiele/ot-menucards",
+	"type": "typo3-cms-extension",
+	"description": "This content element can be used to output the subpages as Bootstrap Card elements.",
+	"homepage": "https://www.oliver-thiele.de",
+	"license": [
+		"GPL-2.0-or-later"
+	],
+	"authors": [
+		{
+			"name": "Oliver Thiele",
+			"email": "mail@oliver-thiele.de",
+			"role": "Developer"
+		}
+	],
+	"version": "1.0.1",
+	"require": {
+		"typo3/cms-core": "^11.5"
+	},
+	"conflict": {
+	},
+	"autoload": {
+		"psr-4": {
+			"OliverThiele\\OtMenucards\\": "Classes/"
+		}
+	},
+	"extra": {
+		"typo3/cms": {
+			"extension-key": "ot_menucards"
+		}
+	}
+}

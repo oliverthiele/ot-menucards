@@ -1,0 +1,10 @@
+projectSettings {
+  sitepackage {
+    # cat=SITEPACKAGE/others/a; type=text; label=Sitepackage Extension Key:
+    extensionKey = ot_bootstrap5
+  }
+  ot_menucards {
+    # cat=CE_MENU_CARD/others/a; type=text; label=DB Field for card image:(media, menu_image, …)
+    dbfieldForCardImage = media
+  }
+}

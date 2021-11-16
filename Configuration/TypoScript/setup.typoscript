@@ -1,0 +1,43 @@
+# Add CSS with the SCSS file "typo3conf/ext/ot_menucards/Resources/Private/Scss/_OtMenucards.scss"
+
+tt_content.ot_menucards >
+tt_content.ot_menucards =< lib.contentElement
+tt_content.ot_menucards {
+  templateName = OtMenucards
+  templateRootPaths {
+    10 = EXT:{$projectSettings.sitepackage.extensionKey}/Resources/Private/Content/Partials/
+    20 = EXT:ot_menucards/Resources/Private/Templates/
+  }
+
+  partialRootPaths {
+    10 = EXT:{$projectSettings.sitepackage.extensionKey}/Resources/Private/Content/Partials/
+    20 = EXT:ot_menucards/Resources/Private/Partials/
+  }
+
+  layoutRootPaths {
+    10 = EXT:{$projectSettings.sitepackage.extensionKey}/Resources/Private/Content/Layouts/
+    20 = EXT:ot_menucards/Resources/Private/Layouts/
+  }
+
+  settings.ot_menucards {
+    dbfieldForCardImage = {$projectSettings.ot_menucards.dbfieldForCardImage}
+  }
+
+  dataProcessing {
+    10 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
+    10 {
+      special = directory
+      special.value.field = pages
+      dataProcessing {
+        10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+        10 {
+          references.fieldName = {$projectSettings.ot_menucards.dbfieldForCardImage}
+        }
+      }
+    }
+    20 = TYPO3\CMS\Frontend\DataProcessing\FlexFormProcessor
+    20 {
+      as = flexform
+    }
+  }
+}

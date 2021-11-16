@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+	<file source-language="en"
+		  datatype="plaintext"
+		  original="EXT:ot_menucards/Resources/Private/Language/locallang_be.xlf"
+		  date="2021-11-15T22:47:46Z"
+		  product-name="ot_menucards">
+		<header/>
+		<body>
+			<trans-unit id="wizard.title" resname="wizard.title">
+				<source>Menu Cards</source>
+			</trans-unit>
+			<trans-unit id="wizard.description" resname="wizard.description">
+				<source>Menu of subpages with card layout</source>
+			</trans-unit>
+			<trans-unit id="tt_content.CType" resname="tt_content.CType">
+				<source>Menu Cards</source>
+			</trans-unit>
+			<trans-unit id="flexform.maxColumns" resname="flexform.maxColumns">
+				<source>Max columns (desktop)</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>
