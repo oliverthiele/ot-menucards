@@ -5,7 +5,7 @@ tt_content.ot_menucards =< lib.contentElement
 tt_content.ot_menucards {
   templateName = OtMenucards
   templateRootPaths {
-    10 = EXT:{$projectSettings.sitepackage.extensionKey}/Resources/Private/Content/Partials/
+    10 = EXT:{$projectSettings.sitepackage.extensionKey}/Resources/Private/Content/Templates/
     20 = EXT:ot_menucards/Resources/Private/Templates/
   }
 
@@ -20,7 +20,7 @@ tt_content.ot_menucards {
   }
 
   settings.ot_menucards {
-    dbfieldForCardImage = {$projectSettings.ot_menucards.dbfieldForCardImage}
+    dbFieldForCardImage = {$projectSettings.ot_menucards.dbFieldForCardImage}
   }
 
   dataProcessing {
