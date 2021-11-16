@@ -1,4 +1,4 @@
-mod.wizards.newContentElement.wizardItems.common {
+mod.wizards.newContentElement.wizardItems.menu {
   elements {
     ot_menucards {
       iconIdentifier = content-menu-pages
