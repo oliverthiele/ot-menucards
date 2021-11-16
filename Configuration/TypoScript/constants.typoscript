@@ -5,6 +5,6 @@ projectSettings {
   }
   ot_menucards {
     # cat=CE_MENU_CARD/others/a; type=text; label=DB Field for card image:(media, menu_image, …)
-    dbfieldForCardImage = media
+    dbFieldForCardImage = media
   }
 }

@@ -31,7 +31,7 @@ tt_content.ot_menucards {
       dataProcessing {
         10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
         10 {
-          references.fieldName = {$projectSettings.ot_menucards.dbfieldForCardImage}
+          references.fieldName = {$projectSettings.ot_menucards.dbFieldForCardImage}
         }
       }
     }
